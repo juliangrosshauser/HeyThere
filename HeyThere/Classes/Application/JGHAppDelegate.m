@@ -7,6 +7,7 @@
 //
 
 #import "JGHAppDelegate.h"
+#import "JGHViewController.h"
 
 @implementation JGHAppDelegate
 
@@ -28,6 +29,16 @@
             }];
         }
     }];
+
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+
+    JGHViewController *viewController = [[JGHViewController alloc] initWithLayerClient:self.layerClient];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+
+
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
