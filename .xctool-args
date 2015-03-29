@@ -1,0 +1,7 @@
+[
+  "-workspace", "HeyThere.xcworkspace",
+  "-scheme", "HeyThere",
+  "-configuration", "Debug",
+  "-sdk", "iphonesimulator",
+  "-arch", "i386"
+]
